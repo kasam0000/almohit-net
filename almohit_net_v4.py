@@ -548,9 +548,6 @@ if __name__ == "__main__":
     conn.close()
     
     # إذا لم تكن هناك بيانات محفوظة، يطلبها في الشاشة السوداء
-    if not USER or not PASS:
-        USER = input("اسم مستخدم MikroTik (الافتراضي: admin): ").strip() or "admin"
-        PASS = getpass.getpass("كلمة مرور MikroTik: ")
     
     threading.Thread(target=refresh_data, daemon=True).start()
     print("🌐 افتح المتصفح على: http://127.0.0.1:8080")
