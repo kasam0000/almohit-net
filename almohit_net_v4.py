@@ -552,5 +552,5 @@ if __name__ == "__main__":
     threading.Thread(target=refresh_data, daemon=True).start()
     print("🌐 افتح المتصفح على: http://127.0.0.1:8080")
     import os
-port = int(os.environ.get("PORT", 8080))
-app.run(host="0.0.0.0", port=port, debug=False, threaded=True)
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host="0.0.0.0", port=port, debug=False, threaded=True)
